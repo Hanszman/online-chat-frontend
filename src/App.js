@@ -9,7 +9,7 @@ function App() {
   const [room, setRoom] = useState('');
   const joinRoom = () => {
     if (username && room) {
-      
+      socket.emit('join_room', room);
     }
   }
   return (
@@ -25,7 +25,7 @@ function App() {
         placeholder="Room ID..."
         onChange={event => {setRoom(event.target.value)}}
       />
-      <button>Join A Room</button>
+      <button onClick={joinRoom}>Join A Room</button>
     </div>
   );
 }
