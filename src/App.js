@@ -24,12 +24,12 @@ function App() {
             <input
               type="text"
               placeholder="John..."
-              onChange={event => {setUsername(event.target.value)}}
+              onChange={event => setUsername(event.target.value)}
             />
             <input
               type="text"
               placeholder="Room ID..."
-              onChange={event => {setRoom(event.target.value)}}
+              onChange={event => setRoom(event.target.value)}
             />
             <button onClick={joinRoom}>Join A Room</button>
           </div>
